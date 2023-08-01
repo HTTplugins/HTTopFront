@@ -1,0 +1,48 @@
+:host{
+  display: block;
+  background-image: url('../../../assets/layered-peaks-haikei.svg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Asegura que el componente ocupe toda la altura de la pantalla */
+  display: flex; /* Utilizamos flexbox para expandir el contenido */
+  flex-direction: column; /* Alinear elementos verticalmente */
+  animation: slideDown 0.5s;
+}
+
+.logo, p { /* Aplicamos la animación a ambos elementos */
+  animation: slideDown 0.5s;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(30%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+}
+
+.title, .subtitle{
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.custom-button {
+  background-color: #b35000;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  padding: 1% 4%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  font-size: 190%;
+}
+.custom-button:hover {
+  transform: scale(1.1);
+}

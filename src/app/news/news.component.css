@@ -1,0 +1,61 @@
+.custom-button {
+    background-color: #b35000;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    padding: 1% 4%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    font-size: 190%;
+  }
+  .custom-button:hover {
+    transform: scale(1.1);
+  }
+
+
+
+.post-container {
+  margin-bottom: 2%;
+  background-color: #812828;
+  padding: 2%;
+  text-align: center;
+
+}
+
+/* Estilo para el título */
+.postTitle {
+  text-align: left;
+  text-decoration: none; /* Quita el subrayado */
+  color: black; /* Color inicial del título (negro) */
+  transition: color 0.3s ease; /* Transición para el efecto de color al poner el ratón encima */
+}
+
+.postTitle:hover {
+  color: rgb(96, 96, 181); /* Color del título al poner el ratón encima (azul) */
+}
+
+.date{
+  text-align: left;
+  font-size: 120%;
+}
+
+.descrip{
+  text-align: left;
+  font-size: 110%;
+}
+
+.addPost{
+  text-align: center;
+  font-size: 400%;
+  padding: 0%;
+  margin: 0%;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  color: black;
+
+}
+
+.addPost:hover{
+  color: rgb(96, 96, 181);
+  cursor: pointer;
+}

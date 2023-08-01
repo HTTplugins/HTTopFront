@@ -1,0 +1,72 @@
+<div *ngIf="!getCorrectRegister()" class="register-modal-overlay">
+  <div class="register-modal">
+    <button type="button" class="close" aria-label="Close" (click)="RegisterCloseModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+    <h2 class="register-title">Register</h2>
+
+
+    <form (ngSubmit)="onSubmit(registerForm.value)" #registerForm="ngForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" [(ngModel)]="formData.username">
+      </div>
+    
+      <div class="form-group">
+        <label for="mail">Mail</label>
+        <input type="text" class="form-control" id="mail" name="mail" [(ngModel)]="formData.mail" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="mail-confirm">Confirm mail</label>
+        <input type="text" class="form-control" id="mail-confirm" name="mailConfirm" [(ngModel)]="formData.mailConfirm">
+      </div>
+    
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="formData.password">
+      </div>
+    
+      <div class="form-group">
+        <label for="password-confirm">Password Confirmation</label>
+        <input type="password" class="form-control" id="password-confirm" name="passwordConfirm" [(ngModel)]="formData.passwordConfirm">
+      </div>
+    
+      <button type="submit" class="btn  btn-center">Submit</button>
+
+      <div *ngIf="formatErrors.length > 0">
+        <div *ngFor="let formatError of formatErrors;">
+          <p class="error-message"> ⚠ Error: {{formatError}}</p>
+        </div>
+      </div>
+      
+
+      
+    </form>
+    
+
+  </div>
+</div>
+
+<div *ngIf="getCorrectRegister()" class="register-modal-overlay">
+  <div class="register-modal">
+
+    <button type="button" class="close" aria-label="Close" (click)="RegisterCloseModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+
+    <h2 class="register-title">Register successful 👏!</h2>
+    <p class="register-text">Thanks you very much for registering in HTTop webpage.
+      We hope you get fun with us.</p>
+    <p class="register-text"> Remember you can now login with your new account.</p>
+
+    
+      <div class="text-center">
+        <button class="btn  btn-center" (click)="RegisterOpenLoginModal()">Login !</button>
+      </div>
+    
+
+  </div>
+</div>

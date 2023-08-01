@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<!-- Mensaje de error -->
+<div *ngIf="DNisUndefined()">
+    <div *ngIf="!DNisUndefined()"></div>
+    
+    <div class="post-container">
+    <h1 class="error-title">ERROR 404</h1>
+    <h2 class="error-subtitle">Detailed news not found</h2>
+    <p class="error-message">Please, if you think this could be an error, contact the administrator.</p>
+    </div>
+</div>
+  
+  <!-- Información de la noticia -->
+  <div *ngIf="!DNisUndefined()">
+    <div class="post-container">
+        <h1 class="news-title">{{ detailedNewsInfo.title }}</h1>
+        <h3 class="news-date">{{ detailedNewsInfo.pdate }}</h3>
+        <hr class="my-4">
+        <div class="news-content" [innerHTML]="detailedNewsInfo.content"></div>
+ 
+    </div>
+
+
+
+    
+    
+  </div>
+  

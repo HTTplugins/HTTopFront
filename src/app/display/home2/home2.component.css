@@ -1,0 +1,63 @@
+:host{
+  display: block;
+  background-image: url('../../../assets/layered-peaks-haikei-up.svg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Asegura que el componente ocupe toda la altura de la pantalla */
+  display: flex; /* Utilizamos flexbox para expandir el contenido */
+  flex-direction: column; /* Alinear elementos verticalmente */
+  animation: slideUp 0.5s;
+}
+
+.logo, p { /* Aplicamos la animación a ambos elementos */
+  animation: slideDown 0.5s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+.home2-infoSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 5% 3%;
+}
+
+.text-section {
+  flex: 1;
+  padding: 20px;
+
+}
+
+.video-section {
+  flex: 1;
+
+
+}
+
+.video-section video {
+  width: 100%;
+  height: auto;
+}
+
+.home2-Title{
+  text-align: justify;
+  margin-left: 0%;
+  padding-left: 0%;
+  font-size: 270%;
+}
+
+.home2-text{
+
+  font-size: 150%;
+  padding-right: 8%;
+}

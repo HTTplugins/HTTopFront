@@ -1,0 +1,32 @@
+.welcome{
+    color: #FFFFFF8C;
+    margin: 0;
+}
+
+.dropdown-menu{
+    background-color: #212529;
+}
+
+.dropdown-item{
+    
+    color: #FFFFFF8C;
+}
+
+/* Estilo para el enlace en estado normal */
+a.dropdown-item {
+    color: #FFFFFF8C; /* Color de las letras en estado normal */
+    background-color: transparent; /* Fondo transparente en estado normal */
+  }
+  
+  /* Estilo para el enlace cuando el ratón está encima */
+  a.dropdown-item:hover {
+    color: #fff; /* Color de las letras cuando el ratón está encima */
+    background-color: #212529; /* Fondo del menú cuando el ratón está encima */
+  }
+  
+.nav-link{
+    font-size: 130%;
+}
+
+  
+  

@@ -1,0 +1,53 @@
+/* Estilos para el mensaje de error */
+.error-title {
+    font-size: 400%;
+    font-weight: bold;
+    text-align: center;
+    color: black; /* Color rojo */
+  }
+  
+
+
+  .error-subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: black; /* Color rojo */
+  }
+  
+  .error-message {
+    font-size: 18px;
+    text-align: center;
+    color: black; /* Color gris oscuro */
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* News Style*/
+
+  .post-container {
+    margin: 10%;
+    background-color: #812828;
+    padding: 2%;
+  
+  } 
+  .news-title {
+    font-size: 330%;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 1%;
+  }
+  
+  .news-date {
+    font-size: 140%;
+    text-align: left;
+    color: #888; /* Color gris */
+    margin-bottom: 20px;
+  }
+  
+  .news-content {
+    font-size: 150%;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+  

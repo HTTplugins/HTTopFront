@@ -1,0 +1,41 @@
+
+<div class="newPost-modal-overlay">
+  <div class="newPost-modal">
+    <button type="button" class="close" aria-label="Close" (click)="newPostCloseModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+    
+
+    <h2 class="newPost-title">New Post</h2>
+
+    
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" name="title" [(ngModel)]="title"  required>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" name="description" [(ngModel)]="description"  required>
+      </div>
+
+      <div class="form-group">
+        <div class="editor-container">
+          <angular-editor [(ngModel)]="content" [config]="editorConfig" [placeholder]="'Enter text here...'"></angular-editor>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-center" (click)="onSubmit()">Submit</button>
+    
+      <div *ngIf="Errors.length > 0">
+        <div *ngFor="let error of Errors;">
+          <p class="error-message"> ⚠ Error: {{error}}</p>
+        </div>
+      </div>
+     
+
+    
+
+  </div>
+</div>

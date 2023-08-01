@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<app-new-post-modal *ngIf="isOpenNewPostModal()"></app-new-post-modal>
+
+<div *ngIf="userIsAdmin">
+  <div class="container mt-5 post-container">
+    
+   <a class="addPost" (click)="openNewPostModal()"> + </a>   
+   
+  </div>
+</div>
+
+<div *ngFor="let news of news_list">
+  <div class="container mt-5 post-container">
+    <div class="text-center">
+      <h1 class="display-4 postTitle">
+        <a [routerLink]="'/detailed-news'" [queryParams]="{id: news.id}" style="text-decoration: none; color: inherit;">
+          {{ news.title }}
+        </a>
+      </h1>
+      <p class="date">{{ news.pdate }}</p>
+      <hr class="my-4">
+      <p class="descrip">{{ news.descrip }}</p>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngIf="availableMoreNews()">
+
+
+  <div class="container mt-5">
+    <div class="text-center">
+      <button class="custom-button" (click)="loadMoreNews()">More news</button>
+    </div>
+  </div>
+</div>
