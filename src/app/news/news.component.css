@@ -7,6 +7,7 @@
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     font-size: 190%;
+    margin-bottom: 2%;
   }
   .custom-button:hover {
     transform: scale(1.1);

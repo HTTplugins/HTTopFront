@@ -18,6 +18,11 @@
         <h3 class="news-date">{{ detailedNewsInfo.pdate }}</h3>
         <hr class="my-4">
         <div class="news-content" [innerHTML]="detailedNewsInfo.content"></div>
+
+        <div *ngIf="isAdmin" class="trash-icon-container">
+          <fa-icon [icon]="trashIcon" class="trash-icon"><a (click)="openConfirmationModal()"></a></fa-icon>
+
+        </div>
  
     </div>
 

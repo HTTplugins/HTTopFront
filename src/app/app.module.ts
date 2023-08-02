@@ -27,6 +27,8 @@ import {newsObtainerService } from './news/newsObtainer.service';
 import { NewPostModalComponent } from './news/new-post-modal/new-post-modal.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { DetailedNewsComponent } from './news/detailed-news/detailed-news.component';
+import { MapComponent } from './map/map.component';
+import { ConfirmationModalComponent } from './news/detailed-news/confirmation-modal/confirmation-modal.component';
 
 
 
@@ -48,6 +50,8 @@ import { DetailedNewsComponent } from './news/detailed-news/detailed-news.compon
     AbilitiesComponent,
     NewPostModalComponent,
     DetailedNewsComponent,
+    MapComponent,
+    ConfirmationModalComponent,
     
   ],
   imports: [

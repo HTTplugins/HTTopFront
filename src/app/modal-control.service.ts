@@ -7,7 +7,15 @@ export class ModalControlService {
   private loginModalOpen = false;
   private registerModalOpen = false;
   private newPostModalOpen = false;
+  private confirmationModalOpen = false;
 
+  confirmationIsOpen(): boolean {
+    return this.confirmationModalOpen;
+  }
+
+  setConfirmationModalOpen(confModal :boolean): void {
+    this.confirmationModalOpen = confModal;
+  }
 
   newPostIsOpen(): boolean {
     return this.newPostModalOpen;

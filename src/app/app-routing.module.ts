@@ -8,6 +8,8 @@ import { NewsComponent } from './news/news.component';
 import { PiratesComponent } from './pirates/pirates.component';
 import { AbilitiesComponent } from './abilities/abilities.component';
 import { DetailedNewsComponent } from './news/detailed-news/detailed-news.component';
+import { MapComponent } from './map/map.component';
+import { ConfirmationModalComponent } from './news/detailed-news/confirmation-modal/confirmation-modal.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path: 'abilities', component: AbilitiesComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'detailed-news', component :DetailedNewsComponent},
+  {path: 'map', component: MapComponent},
+  {path: 'confirmation-modal', component :ConfirmationModalComponent},
   {path: '**', component: ErrorComponent}
 
 ];
