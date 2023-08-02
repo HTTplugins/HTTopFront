@@ -10,6 +10,15 @@ export class newsObtainerService {
   news_list: news[] = [];
   page :number = 1;
   availableMoreNews :boolean = true;
+  private detailedNewsId :number;
+
+  setDetailedNewsId(id :number){
+    this.detailedNewsId = id;
+  }
+
+  getDetailedNewsId(){
+    return this.detailedNewsId;
+  }
 
   constructor(private http: HttpClient) {}
 
@@ -74,6 +83,26 @@ export class newsObtainerService {
     );
 
   }
+
+  public clear_news_list(){
+    this.news_list = [];
+  }
   
+  public deletePost(){
+
+    this.http.post<boolean>(`${this.backendUrl}/deleteNews`,this.detailedNewsId).subscribe(
+      (news) => {
+          this.news_list.pop();
+          return true;
+          
+      },
+      (error) => {
+        return false;
+        console.error('Error, failed to load the news', error);
+      }
+    );
+    
+
+  }
 
 }

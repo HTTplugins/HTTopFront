@@ -1,5 +1,6 @@
 <app-header></app-header>
 
+<app-confirmation-modal *ngIf="getConfirmationModalState()"></app-confirmation-modal>
 <!-- Mensaje de error -->
 <div *ngIf="DNisUndefined()">
     <div *ngIf="!DNisUndefined()"></div>
@@ -19,16 +20,10 @@
         <hr class="my-4">
         <div class="news-content" [innerHTML]="detailedNewsInfo.content"></div>
 
-        <div *ngIf="isAdmin" class="trash-icon-container">
-          <fa-icon [icon]="trashIcon" class="trash-icon"><a (click)="openConfirmationModal()"></a></fa-icon>
+        <div *ngIf="userIsAdmin" class="trash-icon-container">
+          <a (click)="openConfirmationModal()"><fa-icon [icon]="trashIcon" class="trash-icon"></fa-icon></a>
 
         </div>
- 
     </div>
-
-
-
-    
-    
   </div>
   

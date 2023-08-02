@@ -28,5 +28,9 @@ a.dropdown-item {
     font-size: 130%;
 }
 
+.nav-link:hover{
+    cursor: pointer;
+}
+
   
   

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { news } from './news.model';
 import { newsObtainerService } from './newsObtainer.service';
 import { LoginRegisterService } from '../loginRegister.service';
-import { count } from 'rxjs';
 import { ModalControlService } from '../modal-control.service';
 
 @Component({
@@ -21,11 +20,15 @@ export class NewsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    
     this.newsObtainerService.loadNews();
 
     this.news_list = this.newsObtainerService.news_list;
     this.initialiceAdminUser();
-    console.log("lista: " , this.news_list);
+
+   
+    
+    
   }
 
   loadMoreNews() {

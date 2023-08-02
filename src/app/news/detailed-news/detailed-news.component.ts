@@ -4,6 +4,7 @@ import { newsObtainerService } from '../newsObtainer.service';
 import { news } from '../news.model';
 import {faTrash} from '@fortawesome/free-solid-svg-icons'
 import { ModalControlService } from 'src/app/modal-control.service';
+import { LoginRegisterService } from 'src/app/loginRegister.service';
 
 
 @Component({
@@ -12,23 +13,38 @@ import { ModalControlService } from 'src/app/modal-control.service';
   styleUrls: ['./detailed-news.component.css']
 })
 export class DetailedNewsComponent implements OnInit {
-  isAdmin: boolean = false;
+  userIsAdmin: boolean = false;
   newsId: string = 'a';
   detailedNewsInfo :news;
   trashIcon = faTrash;
 
-  constructor(private route: ActivatedRoute, private newsObtainer :newsObtainerService, private modal :ModalControlService){}
+  constructor(private route: ActivatedRoute, private newsObtainer :newsObtainerService,
+     private modal :ModalControlService,
+     private login :LoginRegisterService){}
 
   ngOnInit() {
-    console.log('a');
+    
     this.route.queryParams.subscribe(params => {
       this.newsId = params['id'];
       this.detailedNewsInfo = this.newsObtainer.getDetailedNews(parseInt(this.newsId));
-      this.isAdmin = params['userIsAdmin'];
+      this.initialiceAdminUser();
     });
 
     console.log(this.detailedNewsInfo);
 
+  }
+
+  initialiceAdminUser() {
+    var savedMail = localStorage.getItem('loggedInMail');
+    console.log(savedMail);
+
+    if (savedMail != null) {
+      this.login.checkAdmin(savedMail).subscribe((isAdmin) => {
+        this.userIsAdmin = isAdmin;
+      });
+    }
+
+    
   }
 
   DNisUndefined(){
@@ -38,6 +54,11 @@ export class DetailedNewsComponent implements OnInit {
   
 
   openConfirmationModal(){
-    this.modal.setConfirmationModalOpen(true);
+    this.modal.confirmationOpenModal();
+    this.newsObtainer.setDetailedNewsId(parseInt(this.newsId));
+  }
+
+  getConfirmationModalState(){
+    return this.modal.confirmationIsOpen();
   }
 }

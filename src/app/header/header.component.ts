@@ -51,6 +51,8 @@ export class HeaderComponent implements OnInit {
   }
 
   openLoginModal() {
+    //event.preventDefault();
+    
     this.modalControl.loginOpenModal();
   }
 

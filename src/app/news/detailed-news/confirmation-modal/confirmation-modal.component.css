@@ -30,6 +30,8 @@
     font-size: 20px;
     cursor: pointer;
     color: #000;
+    display: flex;
+    justify-content: center;
   }
   
   .newPost-title {
@@ -57,4 +59,14 @@
     max-height: 50%;
     overflow-y: auto; 
   }
+
+
+  
+  .newPost-modal .btn {
+    outline: none;
+  }
+  
+
+  
+
   

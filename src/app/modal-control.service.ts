@@ -9,17 +9,9 @@ export class ModalControlService {
   private newPostModalOpen = false;
   private confirmationModalOpen = false;
 
-  confirmationIsOpen(): boolean {
-    return this.confirmationModalOpen;
-  }
 
-  setConfirmationModalOpen(confModal :boolean): void {
-    this.confirmationModalOpen = confModal;
-  }
 
-  newPostIsOpen(): boolean {
-    return this.newPostModalOpen;
-  }
+  
 
   loginIsOpen(): boolean {
     return this.loginModalOpen;
@@ -27,6 +19,7 @@ export class ModalControlService {
 
   loginOpenModal(): void {
     this.loginModalOpen = true;
+    
   }
 
   loginCloseModal(): void {
@@ -53,6 +46,22 @@ export class ModalControlService {
 
   newPostCloseModal(): void {
     this.newPostModalOpen = false;
+  }
+  confirmationIsOpen(): boolean {
+    return this.confirmationModalOpen;
+  }
+
+  confirmationOpenModal(): void {
+   
+    this.confirmationModalOpen = true;
+  }
+  confirmationCloseModal(): void {
+   
+    this.confirmationModalOpen = false;
+  }
+
+  newPostIsOpen(): boolean {
+    return this.newPostModalOpen;
   }
 
 
