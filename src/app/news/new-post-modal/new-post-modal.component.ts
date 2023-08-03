@@ -18,7 +18,7 @@ export class NewPostModalComponent {
   editorConfig = {
     editable: true,
     spellcheck: true,
-    height: '200px', // Altura del editor
+    height: '200px', 
     minHeight: '100px',
     placeholder: 'Enter text here...',
     translate: 'no',
@@ -30,9 +30,9 @@ export class NewPostModalComponent {
       { class: 'calibri', name: 'Calibri' },
       { class: 'comic-sans-ms', name: 'Comic Sans MS' }
     ],
-    uploadUrl: 'http://localhost:3000/upload', // URL para subir imágenes (si se necesita)
+    uploadUrl: 'http://localhost:8080/api/news/uploadImg', 
     sanitize: true,
-    toolbarPosition: undefined, // Cambiar el valor a 'undefined'
+    toolbarPosition: undefined, 
     toolbarHiddenButtons: [['bold', 'italic'], ['fontSize']]
   };
   constructor(private modalControl: ModalControlService, private newsobtaiter :newsObtainerService){}

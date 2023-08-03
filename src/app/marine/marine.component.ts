@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MarineComponent implements OnInit {
 
   ngOnInit() {
-    // Agrega la clase fade-in a los elementos que deseas animar después de que la vista se haya inicializado
+
     const elementsToAnimate = document.querySelectorAll('.fade-in');
     elementsToAnimate.forEach(element => {
       element.classList.add('fade-in');

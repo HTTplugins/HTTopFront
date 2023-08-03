@@ -3,13 +3,13 @@
   background-image: url('../../../assets/layered-peaks-haikei.svg');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Asegura que el componente ocupe toda la altura de la pantalla */
-  display: flex; /* Utilizamos flexbox para expandir el contenido */
-  flex-direction: column; /* Alinear elementos verticalmente */
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
   animation: slideDown 0.5s;
 }
 
-.logo, p { /* Aplicamos la animación a ambos elementos */
+.logo, p { 
   animation: slideDown 0.5s;
 }
 
@@ -43,6 +43,7 @@
   transition: transform 0.2s ease-in-out;
   font-size: 190%;
 }
+
 .custom-button:hover {
   transform: scale(1.1);
 }

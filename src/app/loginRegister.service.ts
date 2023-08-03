@@ -53,34 +53,34 @@ export class LoginRegisterService {
                     (user) => {
                       localStorage.setItem('loggedInUser', user.username);
                       localStorage.setItem('loggedInMail', user.mail);
-                      observer.next(Errors); // Enviar el array de errores a través del observable
-                      observer.complete(); // Completar el observable
+                      observer.next(Errors); 
+                      observer.complete(); 
                     },
                     (error) => {
                       console.error('Error con los servicios de inicio de sesión', error);
-                      observer.error(error); // Enviar el error a través del observable
+                      observer.error(error); 
                     }
                   );
                 } else {
                   Errors.push('contraseña incorrecta');
-                  observer.next(Errors); // Enviar el array de errores a través del observable
-                  observer.complete(); // Completar el observable
+                  observer.next(Errors); 
+                  observer.complete();
                 }
               },
               (error) => {
                 console.error('Error con el inicio de sesión', error);
-                observer.error(error); // Enviar el error a través del observable
+                observer.error(error); 
               }
             );
           } else {
             Errors.push('este correo electrónico no está registrado');
-            observer.next(Errors); // Enviar el array de errores a través del observable
-            observer.complete(); // Completar el observable
+            observer.next(Errors); 
+            observer.complete(); 
           }
         },
         (error) => {
           console.error('Error con el inicio de sesión', error);
-          observer.error(error); // Enviar el error a través del observable
+          observer.error(error); 
         }
       );
     });
@@ -107,7 +107,7 @@ export class LoginRegisterService {
               if (usedMail) {
                 Errors.push('this email is already in use.');
               } else {
-                // Si ni el usuario ni el email están en uso, procedemos con la solicitud HTTP POST.
+                
                 this.http
                   .post(`${this.backendUrl}/createUser`, formData)
                   .subscribe(

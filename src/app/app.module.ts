@@ -22,7 +22,6 @@ import { HomeSelectorService } from './display/homeSelector.service';
 import { ProfileComponent } from './profile/profile.component';
 import { NewsComponent } from './news/news.component';
 import { PiratesComponent } from './pirates/pirates.component';
-import { AbilitiesComponent } from './abilities/abilities.component';
 import {newsObtainerService } from './news/newsObtainer.service';
 import { NewPostModalComponent } from './news/new-post-modal/new-post-modal.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
@@ -47,7 +46,6 @@ import { ConfirmationModalComponent } from './news/detailed-news/confirmation-mo
     ProfileComponent,
     NewsComponent,
     PiratesComponent,
-    AbilitiesComponent,
     NewPostModalComponent,
     DetailedNewsComponent,
     MapComponent,

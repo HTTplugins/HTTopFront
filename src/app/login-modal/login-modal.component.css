@@ -1,4 +1,4 @@
-/* login-modal.component.css */
+
 .login-modal-overlay {
   position: fixed;
   top: 0;
@@ -13,12 +13,12 @@
 
 .login-modal {
   background-color: #fff;
-  position: relative; /* Añadimos esta propiedad para que position: absolute; del botón "x" sea relativo a este div */
+  position: relative; 
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para el botón "x" */
+
 .login-modal .close {
   position: absolute;
   top: 10px;
@@ -36,7 +36,7 @@
 }
 
 .form-group {
-  margin-bottom: 10px; /* Ajusta el valor según el espacio deseado */
+  margin-bottom: 10px; 
 }
 
 .btn-center {

@@ -23,16 +23,16 @@
 
 }
 
-/* Estilo para el título */
+
 .postTitle {
   text-align: left;
-  text-decoration: none; /* Quita el subrayado */
-  color: black; /* Color inicial del título (negro) */
-  transition: color 0.3s ease; /* Transición para el efecto de color al poner el ratón encima */
+  text-decoration: none;
+  color: black; 
+  transition: color 0.3s ease; 
 }
 
 .postTitle:hover {
-  color: rgb(96, 96, 181); /* Color del título al poner el ratón encima (azul) */
+  color: rgb(96, 96, 181); 
 }
 
 .date{

@@ -1,16 +1,13 @@
-/* Estilos para el contenedor de la página */
 .page-container {
     display: grid;
-    grid-template-rows: auto 1fr; /* Primera fila auto (ajustada al contenido), resto del espacio 1fr (fracción) */
-    height: 100vh; /* Establecer altura del 100% de la ventana */
+    grid-template-rows: auto 1fr; 
+    height: 100vh; 
   }
   
-  /* Estilos para el contenedor del mapa */
   .map-container {
     position: relative;
   }
   
-  /* Estilos para el iframe */
   .map-container iframe {
     width: 100%;
     height: 100%;

@@ -25,10 +25,6 @@ export class NewsComponent implements OnInit {
 
     this.news_list = this.newsObtainerService.news_list;
     this.initialiceAdminUser();
-
-   
-    
-    
   }
 
   loadMoreNews() {
@@ -37,7 +33,6 @@ export class NewsComponent implements OnInit {
   }
 
   availableMoreNews() {
-    //console.log("H");
     return this.newsObtainerService.availableMoreNews;
   }
 
