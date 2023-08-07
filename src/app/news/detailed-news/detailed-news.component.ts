@@ -17,6 +17,27 @@ export class DetailedNewsComponent implements OnInit {
   newsId: string = 'a';
   detailedNewsInfo :news;
   trashIcon = faTrash;
+  content :string = '';
+  editorConfig = {
+    editable: true,
+    spellcheck: true,
+    height: '200px', 
+    minHeight: '100px',
+    placeholder: 'Enter text here...',
+    translate: 'no',
+    defaultFontName: 'Arial',
+    defaultFontSize: '3',
+    fonts: [
+      { class: 'arial', name: 'Arial' },
+      { class: 'times-new-roman', name: 'Times New Roman' },
+      { class: 'calibri', name: 'Calibri' },
+      { class: 'comic-sans-ms', name: 'Comic Sans MS' }
+    ],
+    uploadUrl: 'http://localhost:8080/api/news/uploadImg', 
+    sanitize: true,
+    toolbarPosition: undefined, 
+    toolbarHiddenButtons: [['bold', 'italic'], ['fontSize']]
+  };
 
   constructor(private route: ActivatedRoute, private newsObtainer :newsObtainerService,
      private modal :ModalControlService,
@@ -61,4 +82,24 @@ export class DetailedNewsComponent implements OnInit {
   getConfirmationModalState(){
     return this.modal.confirmationIsOpen();
   }
+
+  loggedIn(){
+    var savedMail = localStorage.getItem('loggedInMail');
+
+    console.log(savedMail);
+
+    if(savedMail != null){
+      console.log("A");
+      return true;
+    }
+    else {
+      console.log("B");
+      return false;
+    }
+      
+  }
+
+
+
+  
 }

@@ -1,9 +1,9 @@
-/* Estilos para el mensaje de error */
+
 .error-title {
     font-size: 400%;
     font-weight: bold;
     text-align: center;
-    color: black; /* Color rojo */
+    color: black; 
   }
   
 
@@ -12,13 +12,13 @@
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    color: black; /* Color rojo */
+    color: black; 
   }
   
   .error-message {
     font-size: 18px;
     text-align: center;
-    color: black; /* Color gris oscuro */
+    color: black; 
     max-width: 600px;
     margin: 0 auto;
   }
@@ -41,7 +41,7 @@
   .news-date {
     font-size: 140%;
     text-align: left;
-    color: #888; /* Color gris */
+    color: #888; 
     margin-bottom: 20px;
   }
   
@@ -51,15 +51,15 @@
     max-width: 800px;
   }
   
-  /* Resto de tus estilos... */
 
-/* Estilos para la papelera de reciclaje */
+
+
 .trash-icon-container {
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-top: -50px; /* Ajusta este valor para posicionar la papelera a tu gusto */
+  margin-top: -50px; 
 }
 
 .trash-icon {
@@ -72,7 +72,28 @@
 }
 
 .trash-icon:hover {
-  transform: scale(1.1); /* Ajusta este valor para cambiar el tamaño en hover */
+  transform: scale(1.1); 
 }
 
-/* Resto de tus estilos... */
+.editor-container {
+  max-height: 50%; 
+  overflow-y: auto; 
+  width: 50%;
+  overflow-x: auto;
+  word-wrap: break-word;
+  background-color: white;
+}
+
+.comment-group{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.editor-container{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+

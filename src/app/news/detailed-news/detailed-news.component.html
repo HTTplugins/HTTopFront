@@ -26,4 +26,14 @@
         </div>
     </div>
   </div>
+
+  <div *ngIf="loggedIn()">
+    <div class="comment-group">
+    <h1> Write your comment!</h1>
+      <div class="editor-container">
+        <angular-editor [(ngModel)]="content" [config]="editorConfig" [placeholder]="'Enter text here...'"></angular-editor>
+      </div>
+    </div>
+  </div>
+  
   

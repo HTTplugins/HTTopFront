@@ -18,6 +18,7 @@
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 10000; 
+  width: 50%;
 }
 
 
@@ -58,4 +59,7 @@
 .editor-container {
   max-height: 50%; 
   overflow-y: auto; 
+  max-width: 100%;
+  overflow-x: auto;
+  word-wrap: break-word;
 }
